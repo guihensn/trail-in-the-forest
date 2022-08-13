@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 85px;
+    
+    background: var(--header-background);
+}
+
+@media screen and (max-width: 600px){
+    .header {
+        padding-left: 0px;
+        align-items: center;
+    }
+}

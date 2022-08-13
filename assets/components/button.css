@@ -1,0 +1,53 @@
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--button-background);
+    background-size: auto 100% ;
+    background-position: center;
+
+    border: unset;
+
+    transition: 1s;
+}
+
+button:hover{
+    background-size: auto 150% ;
+}
+
+.button::before{
+    --rotate: 0deg;
+    --scale: 1;
+
+    content: '';
+
+    width: var(--font-size);
+    aspect-ratio: 1;
+
+    background: url('../images/icons/triangle.png') no-repeat center;
+    background-size:contain;
+    
+    transform: rotate(var(--rotate)) scale(var(--scale));
+}
+
+.button--right::before{
+    --rotate:180deg
+}
+
+.button:hover::before{
+    --scale: 0.8;
+}
+
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .button{
+        background-size: 100%  auto;
+    }
+
+    button:hover{
+        background-size: 150% auto;
+    }
+}
+
+

@@ -1,0 +1,97 @@
+html{
+    height: 100%;
+}
+
+body{ 
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--font-color);
+
+    display: grid;
+    height: 100%;
+
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas: 'header header logo'
+                         'button-1 content button-2'
+                         'links phrase phrase';
+    gap: 5px;
+}
+
+.header{
+    grid-area: header;
+}
+
+.logo{
+    grid-area: logo;
+}
+
+#button-1{
+    grid-area: button-1;
+}
+
+.content{
+    grid-area: content;
+}
+
+#button-2{
+    grid-area: button-2;
+}
+
+.contact{
+    grid-area: links;
+}
+
+.phrase{
+    grid-area: phrase;
+}
+ 
+@media screen and (max-width: 1000px),
+       screen and (max-height: 1000px){
+    body{
+        --font-size: 48px;
+        --font-size-2:36px;
+    }
+}
+
+@media screen and (max-width: 700px),
+       screen and (max-height: 700px){
+    body{
+        --font-size: 36px;
+        --font-size-2:24px;
+    }
+}
+
+@media screen and (max-width: 400px),
+       screen and (max-height: 400px){
+    body{
+        --font-size: 24px;
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
+    body{
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 1fr 1fr 4fr 1fr 1fr;
+        grid-template-areas: 'header header logo'
+                             'button-1 button-1  button-1'
+                             'content content content '
+                             'button-2 button-2 button-2'
+                             'links phrase phrase';
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1/2) {
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr;
+        grid-template-areas: 'logo' 
+                            'header'
+                            'button-1' 
+                            'content' 
+                            'button-2'
+                            'phrase' 
+                            'links';
+    }
+}
+

@@ -1,0 +1,32 @@
+.content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    padding:0px;
+
+    overflow: hidden;
+
+    background: var(--content-background);
+}
+
+.content__image{
+    min-width: 100%;
+    min-height: 100%;
+
+    grid-area: 1 / 1/ 5 / 5;
+
+    transition: 1s;
+}
+
+.content__text{
+    display: block;
+    text-align: center;
+    
+    margin-top: auto;
+    z-index: 2;
+
+    grid-area: 1 / 1 / 5 / 5;
+
+    background-color: rgba(0, 0, 0, 0.576);
+}

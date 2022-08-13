@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+
+:root{
+    --font-size: 64px;
+    --font-size-2: 46px;
+
+    --font-color: white;
+    --font-family:  'Akaya Kanadaka', cursive;
+
+    --green: #6AB578;
+    --brown: #5F5449;
+    --cyan: #AAE4C5;
+
+    --wood-texture: url('../images/textures/wood.png');
+
+    --header-background: var(--green);
+    --logo-background: var(--cyan);
+    --button-background: var(--wood-texture);
+    --content-background: var(--cyan);
+    --contact-background: var(--cyan);
+    --phrase-background: var(--green);
+}
